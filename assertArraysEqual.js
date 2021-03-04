@@ -1,5 +1,5 @@
 
-const assArraysEq = function(actual,expected) {
+const assertArraysEqual = function(actual,expected) {
   const errMsg = `🛑🛑🛑 Assertation Failed:  ${actual} !== ${expected}`;
   const corrMsg = `✅✅✅ Assertation Passed: ${actual} === ${expected}`;
 

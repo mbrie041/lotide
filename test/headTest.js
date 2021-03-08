@@ -19,6 +19,3 @@ describe("#head", () => {
   });
 
 });
-
-
-// assertEqual(head(["Hello", "Lighthouse", "Labs"]), "Hello");

@@ -6,8 +6,4 @@ const assertEqual = function(actual,expected) {
   console.assert(actual === expected, errMsg);
 };
 
-//TEST CODE
-assertEqual("Lighthouse Labs", "Bootcamp");
-assertEqual(1,1);
-assertEqual("Tangg","Tangg");
-assertEqual(1,2);
+module.exports = assertEqual;

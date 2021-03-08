@@ -1,37 +1,4 @@
-const assertEqual = function(actual,expected) {
-  const errMsg = `🛑🛑🛑 Assertation Failed:  ${actual} !== ${expected}`;
-  const corrMsg = `✅✅✅ Assertation Passed: ${actual} === ${expected}`;
-
-  console.assert(actual !== expected, corrMsg);
-  console.assert(actual === expected, errMsg);
-
-};
-
-const eqArrays = function(actual,expected) {
-  
-  return JSON.stringify(actual) === JSON.stringify(expected);
-} 
-
-
-
-// //TEST CODE
-// assertEqual(eqArrays([1, 2, 3], [1, 2, "3"]), true); // => should PASS
-// assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), true); // => should PASS
-
-const assArraysEq = function(actual,expected) {
-  const errMsg = `🛑🛑🛑 Assertation Failed:  ${actual} !== ${expected}`;
-  const corrMsg = `✅✅✅ Assertation Passed: ${actual} === ${expected}`;
-
-  console.assert(JSON.stringify(actual) !== JSON.stringify(expected), corrMsg);
-  console.assert(JSON.stringify(actual) === JSON.stringify(expected), errMsg);
-} 
-
-
-
-// // //TEST CODE
-// assArraysEq([1, 2, 3], [1, 2, 3]) // => should PASS
-// assArraysEq([1, 2, 3], [1, 2, "3"]) // => should not PASS
-
+const assertArraysEqual = require('./assertArraysEqual');
 
 const middle = function(passedArray) {
   //array to store our new array
@@ -57,8 +24,11 @@ const middle = function(passedArray) {
   
    return newArray;
 };
-console.log(middle([1, 2, 3, 4]))
-console.log(assArraysEq(middle([1, 2 ,3 ,4]),[2,3])) 
+module.exports = middle;
+
+
+// console.log(middle([1, 2, 3, 4]))
+// console.log(assertArraysEqual(middle([1, 2 ,3 ,4]),[2,3]))
 
 //What do we have?
   //Array function that runs our array through
